@@ -62,9 +62,9 @@ const Registro = () => {
           <label htmlFor="direccion">Dirección:</label>
           <input type="text" id="direccion" name="direccion" value={formData.direccion} onChange={handleChange} required />
         </div>
-        <div className="mb-3">
-          <label htmlFor="tipo">Selecciona Tu Perfil</label>
-          <select id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
+        <label htmlFor="tipo">Selecciona Tu Perfil</label>
+        <div className="d-flex justify-content-center">
+          <select  className="form-select" id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
             <option value="">Seleccione</option>
             <option value="Administrador">Administrador</option>
             <option value="Usuario">Usuario</option>

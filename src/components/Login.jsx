@@ -4,12 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import '../style/style.css';
 import loginImage from '../assets/login.jpg';
 
+
 const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/some-other-route'); // Cambia la ruta si necesitas redirigir a otro lugar después del login
+    navigate('/some-other-route'); 
   };
 
   return (
