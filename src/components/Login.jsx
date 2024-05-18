@@ -3,12 +3,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/style.css';
 
+
 const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/some-other-route'); // Cambia la ruta si necesitas redirigir a otro lugar después del login
+    navigate('/some-other-route'); 
   };
 
   return (
