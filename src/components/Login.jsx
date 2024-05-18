@@ -21,7 +21,7 @@ const Login = () => {
             <div className="login-container card-body p-2 text-center">
               <div className="mb-md-3 mt-md-2 pb-0">
                 <a href="/">
-                  <img className="ImgI" src="imagenes/login.jpg" alt="Logo de la página" />
+                  <img className="ImgI" src={loginImage} alt="Logo de la página" />
                 </a>
               </div>
               <p className="text mb-5">Introduzca su número de documento y contraseña!</p>
