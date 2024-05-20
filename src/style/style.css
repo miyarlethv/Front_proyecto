@@ -4,15 +4,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background:  linear-gradient(to right, rgb(251, 184, 239), rgb(182, 253, 245));
+    background: linear-gradient(#EBB083, #EBD6C6)
 }
 
 .container2 {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    border: 1px solid #dc07d1;
-    border-radius: 5px;
+    background-color:#ED9779 ;
+    border-radius: 10px;
 }
 
 h2 {
@@ -41,20 +41,6 @@ input[type="password"] {
     border-radius: 5px;
 }
 
-.button {
-    width: 100%;
-    padding: 10px;
-    background-color:rgb(182, 253, 245);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: rgb(182, 253, 245);
-}
 
 
 /* estilos login */
@@ -82,8 +68,8 @@ button:hover {
   
   .btn{
     border:none;
-    background-color: rgb(182, 253, 245);
-    color:rgb(251, 184, 239);
+    background-color:#EBD6C6;
+    color:#EBB083;
     margin-top: 20px;
   }
   
