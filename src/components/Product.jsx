@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import '../style/style.css';
-=======
-
->>>>>>> 1bf54d362ae9caa71b7b26fce63601a317f84d62
 
 const Product = ({ name, description, price }) => {
     
