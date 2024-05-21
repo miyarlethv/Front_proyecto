@@ -2,15 +2,15 @@ import React from 'react';
 import '../style/style.css';
 
 const Product = ({ name, description, price }) => {
-    
   return (
     <div className="product">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <p>Price: ${price}</p>
+      <img src="path/to/your/guitar-image.png" alt="Guitar" className="product-image" />
+      <h3 className="product-title">{name}</h3>
+      <p className="product-description">{description}</p>
+      <p className="product-price">${price}</p>
+      <button type="button" className="product-button">Agregar al Carrito</button>
     </div>
-    
   );
 };
 
-export default Product;
+export default Product;

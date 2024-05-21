@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Registro from './components/Registro';
 import Login from './components/Login';
 import Menu from './components/Menu';
+import Admin from './components/Admin';
 
 function App() {
   
