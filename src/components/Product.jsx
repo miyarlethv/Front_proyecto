@@ -1,13 +1,15 @@
 import React from 'react';
-
+import '../style/style.css';
 
 const Product = ({ name, description, price }) => {
+    
   return (
     <div className="product">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>Price: ${price}</p>
     </div>
+    
   );
 };
 
