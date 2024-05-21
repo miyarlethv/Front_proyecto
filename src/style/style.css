@@ -4,14 +4,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#EBB083, #EBD6C6)
+    background: white;
 }
 
 .container2 {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color:#ED9779 ;
+    background-color: #00A9DB;
     border-radius: 10px;
 }
 
@@ -68,8 +68,8 @@ input[type="password"] {
   
   .btn{
     border:none;
-    background-color:#EBD6C6;
-    color:#EBB083;
+    background-color :#12DBD8;
+    color:#00A9DB;
     margin-top: 20px;
   }
   
