@@ -1,5 +1,6 @@
 /* estilos del registro*/
 body {
+<<<<<<< HEAD
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -12,6 +13,20 @@ body {
   padding: 20px;
   background-color:#ED9779 ;
   border-radius: 10px;
+=======
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.container2 {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #00A9DB;
+    border-radius: 10px;
+>>>>>>> 0a6d1099c9caaa7022ffd03e7742909dea6ac1ce
 }
 
 h2 {
@@ -72,6 +87,24 @@ input[type="password"] {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
+=======
+  .custom-form {
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 90%;
+    height: 90%; 
+  
+  }
+  
+  .btn{
+    border:none;
+    background-color :#12DBD8;
+    color:#00A9DB;
+    margin-top: 20px;
+  }
+  
+>>>>>>> 0a6d1099c9caaa7022ffd03e7742909dea6ac1ce
 /* estilo product*/
 .product {
   border: 1px solid #ccc;
