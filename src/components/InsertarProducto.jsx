@@ -7,25 +7,36 @@ function InsertarProducto() {
     descripcion: '',
     precio: '',
     cantidad: '',
-    imagen: ''
+    imagen: null
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    const { name, type, files, value } = e.target;
+    if (type === 'file') {
+      setFormData({
+        ...formData,
+        [name]: files[0]
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append('nombre', formData.nombre);
+    data.append('descripcion', formData.descripcion);
+    data.append('precio', formData.precio);
+    data.append('cantidad', formData.cantidad);
+    data.append('imagen', formData.imagen);
+
     fetch('http://localhost/Proyecto_final/productos.php', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
+      body: data
     })
     .then(response => {
       if (!response.ok) {
@@ -60,7 +71,7 @@ function InsertarProducto() {
         <input type="number" id="cantidad" name="cantidad" value={formData.cantidad} onChange={handleChange} required />
 
         <label htmlFor="imagen">Imagen:</label>
-        <input type="text" id="imagen" name="imagen" value={formData.imagen} onChange={handleChange} required />
+        <input type="file" id="imagen" name="imagen" onChange={handleChange} required />
 
         <input type="submit" value="Insertar Producto" />
       </form>
