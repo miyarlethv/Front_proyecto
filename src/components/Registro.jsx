@@ -23,7 +23,7 @@ const Registro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost/Proyecto_final/conexion.php', {
+    fetch('http://localhost/Proyecto_final/registro.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

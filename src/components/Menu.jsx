@@ -4,6 +4,7 @@ import '../style/style.css';
 
 const Menu = ({ products }) => {
   return (
+    <>
     <div className="menu">
     <h1>PRODUCTOS </h1> 
     {products.map((product) => (
@@ -15,6 +16,7 @@ const Menu = ({ products }) => {
       />
     ))}
   </div>
+  </>
   );
 };
 
