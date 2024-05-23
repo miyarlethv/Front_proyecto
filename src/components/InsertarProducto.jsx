@@ -56,7 +56,7 @@ function InsertarProducto() {
 
   return (
     <div>
-      <h2>Insertar Nuevo Producto</h2>
+      <h2>Insertar Producto</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
