@@ -42,30 +42,43 @@ function InsertarProducto() {
     })
     .catch(error => console.error('Error:', error));
   };
-
-  return (
-    <div>
-      <h2>Insertar Nuevo Producto</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
-
-        <label htmlFor="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" value={formData.descripcion} onChange={handleChange} required></textarea>
-
-        <label htmlFor="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" value={formData.precio} onChange={handleChange} required />
-
-        <label htmlFor="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" value={formData.cantidad} onChange={handleChange} required />
-
-        <label htmlFor="imagen">Imagen:</label>
-        <input type="text" id="imagen" name="imagen" value={formData.imagen} onChange={handleChange} required />
-
-        <input type="submit" value="Insertar Producto" />
-      </form>
-    </div>
-  );
-}
+  
+    return (
+      <div className="form-container">
+        <h2>Insertar Nuevo Producto</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
+          </div>
+          
+          <div className="form-group">
+            <label htmlFor="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" value={formData.descripcion} onChange={handleChange} required></textarea>
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" value={formData.precio} onChange={handleChange} required />
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" value={formData.cantidad} onChange={handleChange} required />
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" onChange={handleChange} required />
+          </div>
+  
+          <div className="form-group">
+            <input type="submit" value="Insertar Producto" />
+          </div>
+        </form>
+      </div>
+    );
+  };
+  
 
 export default InsertarProducto;
