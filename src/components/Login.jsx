@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/'); 
+    navigate('/insertar-producto'); 
   };
 
   return (
@@ -34,7 +34,7 @@ const Login = () => {
                   <label className="form-label">Contraseña</label>
                   <input type="password" className="form-control form-control-lg" name="pass" />
                 </div>
-                <Link to="/InsertarProducto" className="btn btn-lg">INICIAR SESIÓN</Link>
+                <button className="btn btn-lg" type="submit">INICIAR SESIÓN</button>
                 <div>
                   <Link to="/Registro" className="btn btn-lg"> Registrarme</Link>
                 </div>
