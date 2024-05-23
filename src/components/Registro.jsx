@@ -38,34 +38,7 @@ const Registro = () => {
       if (response.ok) {
         console.log(data.message);
         // Navegar a la siguiente página después del registro exitoso
-        navigate('/Login');
-        
-        // Enviar correo después del registro exitoso
-        const emailData = new FormData();
-        emailData.append("cedula", formData.cedula);
-        emailData.append("nombre", formData.nombre);
-        emailData.append("email", formData.email);
-        emailData.append("telefono", formData.telefono);
-        emailData.append("direccion", formData.direccion);
-        emailData.append("tipo", formData.tipo);
-
-        try {
-          const emailResponse = await fetch('http://localhost/Proyecto_final/emailController2.php', {
-            method: 'POST',
-            body: emailData
-          });
-
-          const emailResult = await emailResponse.json();
-
-          if (emailResult == 1) {
-            alert('El correo ha sido enviado');
-          } else {
-            alert('El correo no se envió');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('Hubo un problema al enviar el correo');
-        }
+        navigate('localhost:5173');
       } else {
         console.error(data.error);
         alert('Error al registrarse');
@@ -99,6 +72,10 @@ const Registro = () => {
         <div className="form-outline form-white mb-4">
           <label htmlFor="direccion">Dirección:</label>
           <input type="text" id="direccion" name="direccion" value={formData.direccion} onChange={handleChange} required />
+        </div>
+        <div className="form-outline form-white mb-4">
+          <label htmlFor="direccion">Contraseña:</label>
+          <input type="text" id="contraseña" name="contraseña" value={formData.contraseña} onChange={handleChange} required />
         </div>
         <label htmlFor="tipo">Selecciona Tu Perfil</label>
         <div className="d-flex justify-content-center">
