@@ -1,6 +1,6 @@
 // Login.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../style/style.css';
 import loginImage from '../assets/login.jpg';
 
@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/some-other-route'); 
+    navigate('/insertar-producto'); 
   };
 
   return (
@@ -36,7 +36,7 @@ const Login = () => {
                 </div>
                 <button className="btn btn-lg" type="submit">INICIAR SESIÓN</button>
                 <div>
-                  <a href="/" className="btn btn-lg">REGISTRARME</a>
+                  <Link to="/Registro" className="btn btn-lg"> Registrarme</Link>
                 </div>
               </form>
             </div>

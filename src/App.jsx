@@ -5,20 +5,14 @@ import Login from './components/Login';
 import InsertarProducto from './components/InsertarProducto';
 
 function App() {
-  
-
   return (
-    <>
     <Router>
       <Routes>
-        <Route path="/" element={<Registro />} />
-        <Route path="/form2" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Registro" element={<Registro />} />
+        <Route path="/insertar-producto" element={<InsertarProducto />} />
       </Routes>
     </Router>
-
-    <InsertarProducto />
-  
-    </>
   );
 }
 
