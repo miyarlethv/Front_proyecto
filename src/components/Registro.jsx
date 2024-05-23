@@ -21,8 +21,9 @@ const Registro = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     fetch('http://localhost/Proyecto_final/registro.php', {
       method: 'POST',
       headers: {
@@ -32,10 +33,32 @@ const Registro = () => {
     })
       .then(response => response.json())
       .then(data => {
+=======
+    
+    try {
+      const response = await fetch('http://localhost/Proyecto_final/registro.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+>>>>>>> a04af36841953ed5b01e830c3cf0b2546761ccf7
         console.log(data.message);
-        navigate('/form2');  // Redirigir a la siguiente página
-      })
-      .catch(error => console.error('Error:', error));
+        // Navegar a la siguiente página después del registro exitoso
+        navigate('localhost:5173');
+      } else {
+        console.error(data.error);
+        alert('Error al registrarse');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error al registrarse');
+    }
   };
 
   return (
@@ -62,9 +85,13 @@ const Registro = () => {
           <label htmlFor="direccion">Dirección:</label>
           <input type="text" id="direccion" name="direccion" value={formData.direccion} onChange={handleChange} required />
         </div>
+        <div className="form-outline form-white mb-4">
+          <label htmlFor="direccion">Contraseña:</label>
+          <input type="text" id="contraseña" name="contraseña" value={formData.contraseña} onChange={handleChange} required />
+        </div>
         <label htmlFor="tipo">Selecciona Tu Perfil</label>
         <div className="d-flex justify-content-center">
-          <select  className="form-select" id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
+          <select className="form-select" id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
             <option value="">Seleccione</option>
             <option value="Administrador">Administrador</option>
             <option value="Usuario">Usuario</option>

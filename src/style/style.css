@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(#EBB083, #EBD6C6)
+  background: white;
 }
 
 .container2 {
@@ -97,7 +97,7 @@ input[type="password"] {
   
   .btn{
     border:none;
-    background-color :#12DBD8;
+    background-color :#00DFE0;
     color:#00A9DB;
     margin-top: 20px;
   }
@@ -181,3 +181,41 @@ text-transform: uppercase;
 .product-button:hover {
 background-color: #333; 
 }
+<<<<<<< HEAD
+=======
+
+
+/* */
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.form-group input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00A9DB;
+  color: white;
+  font-size: 16px;
+
+}
+>>>>>>> a04af36841953ed5b01e830c3cf0b2546761ccf7
