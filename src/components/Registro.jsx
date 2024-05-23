@@ -21,21 +21,59 @@ const Registro = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch('http://localhost/Proyecto_final/registro.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(response => response.json())
-      .then(data => {
+    
+    try {
+      const response = await fetch('http://localhost/Proyecto_final/registro.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
         console.log(data.message);
-        navigate('/form2');  // Redirigir a la siguiente página
-      })
-      .catch(error => console.error('Error:', error));
+        // Navegar a la siguiente página después del registro exitoso
+        navigate('/form2');
+        
+        // Enviar correo después del registro exitoso
+        const emailData = new FormData();
+        emailData.append("cedula", formData.cedula);
+        emailData.append("nombre", formData.nombre);
+        emailData.append("email", formData.email);
+        emailData.append("telefono", formData.telefono);
+        emailData.append("direccion", formData.direccion);
+        emailData.append("tipo", formData.tipo);
+
+        try {
+          const emailResponse = await fetch('http://localhost/Proyecto_final/emailController2.php', {
+            method: 'POST',
+            body: emailData
+          });
+
+          const emailResult = await emailResponse.json();
+
+          if (emailResult == 1) {
+            alert('El correo ha sido enviado');
+          } else {
+            alert('El correo no se envió');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Hubo un problema al enviar el correo');
+        }
+      } else {
+        console.error(data.error);
+        alert('Error al registrarse');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error al registrarse');
+    }
   };
 
   return (
@@ -64,7 +102,7 @@ const Registro = () => {
         </div>
         <label htmlFor="tipo">Selecciona Tu Perfil</label>
         <div className="d-flex justify-content-center">
-          <select  className="form-select" id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
+          <select className="form-select" id="tipo" name="tipo" value={formData.tipo} onChange={handleChange} required>
             <option value="">Seleccione</option>
             <option value="Administrador">Administrador</option>
             <option value="Usuario">Usuario</option>

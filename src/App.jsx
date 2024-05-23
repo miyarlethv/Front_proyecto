@@ -15,9 +15,9 @@ function App() {
         <Route path="/form2" element={<Login />} />
       </Routes>
     </Router>
-    
-    <InsertarProducto />
 
+    <InsertarProducto />
+  
     </>
   );
 }
