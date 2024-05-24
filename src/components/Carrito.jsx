@@ -32,7 +32,7 @@ const Carrito = () => {
               <p>{item.descripcion}</p>
               <p>Precio: ${item.precio}</p>
               <p>Cantidad: {item.cantidad}</p>
-              <button onClick={() => handleEliminarItem(item.id)}>Eliminar</button>
+              <button className='btn btn-lg' onClick={() => handleEliminarItem(item.id)}>Eliminar</button>
             </div>
           ))
         )}
