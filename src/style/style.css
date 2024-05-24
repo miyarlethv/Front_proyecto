@@ -6,19 +6,6 @@ body {
 }
 
 .container2 {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color:#ED9779 ;
-  border-radius: 10px;
-
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: white;
-}
-
-.container2 {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -59,9 +46,11 @@ input[type="password"] {
 
 
 .login-container{
-  border:1px solid rgb(246, 158, 236);
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #00A9DB;
   border-radius: 10px;
-  
 }
 
 .ImgI {
@@ -77,46 +66,13 @@ input[type="password"] {
   height: 90%; 
 
 }
-
-.btn{
-  border:none;
-  background-color:#EBD6C6;
-  color:#EBB083;
-  margin-top: 20px;
-}
-
-
-  .custom-form {
-    padding: 20px; 
-    border-radius: 10px; 
-    width: 90%;
-    height: 90%; 
-  
-  }
   
   .btn{
-    border:none;
     background-color :#00DFE0;
     color:#00A9DB;
     margin-top: 20px;
   }
   
-
-/* estilo product*/
-/*.product {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin: 16px;
-  text-align: left;
-}
-
-.product h2 {
-  margin: 0 0 8px;
-}
-
-.product p {
-  margin: 4px 0;
-}*/
 
 /*estilo menu*/
 .menu, .carrito {

@@ -23,16 +23,7 @@ const Registro = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch('http://localhost/Proyecto_final/registro.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(response => response.json())
-      .then(data => {
-
+    
     try {
       const response = await fetch('http://localhost/Proyecto_final/registro.php', {
         method: 'POST',
