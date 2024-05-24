@@ -1,32 +1,38 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { CarritoContext } from '../components/CarritoContext';
-import '../style/style.css';
+import React, { useState, useEffect } from 'react';
+import '../style/style.css'; // Asegúrate de importar el archivo CSS
 
 const Carrito = () => {
-  const navigate = useNavigate();
-  const { Carrito, eliminarDelCarrito } = useContext(CarritoContext);
+  const [items, setItems] = useState([]);
 
-  const totalCarrito = Carrito.reduce((total, item) => total + item.precio * item.cantidad, 0);
+  useEffect(() => {
+    // Aquí debes cargar los productos del carrito desde tu estado global o API
+    // Simulamos con algunos datos de ejemplo
+    const carritoItems = [
+    ];
+    setItems(carritoItems);
+  }, []);
+
+  const handleEliminarItem = (id) => {
+    const nuevosItems = items.filter(item => item.id !== id);
+    setItems(nuevosItems);
+  };
+
+  const totalCarrito = items.reduce((total, item) => total + item.precio * item.cantidad, 0);
 
   return (
-    <div className="carrito-container">
+    <div className="menu">
       <h1>Mi Carrito</h1>
-      <div className="carrito-items">
-        {Carrito.length === 0 ? (
+      <div className="product-list">
+        {items.length === 0 ? (
           <p>No hay productos en el carrito.</p>
         ) : (
-          Carrito.map((item) => (
-            <div key={item.id} className="carrito-item">
-              <img src={`http://localhost/Proyecto_final/${item.imagen}`} alt={item.nombre} className="carrito-item-image" />
-              <div className="carrito-item-details">
-                <h2>{item.nombre}</h2>
-                <p>{item.descripcion}</p>
-                <p>Precio: ${item.precio}</p>
-                <p>Cantidad: {item.cantidad}</p>
-                <button onClick={() => eliminarDelCarrito(item.id)}>Eliminar</button>
-              </div>
+          items.map((item) => (
+            <div key={item.id} className="product-item">
+              <h2>{item.nombre}</h2>
+              <p>{item.descripcion}</p>
+              <p>Precio: ${item.precio}</p>
+              <p>Cantidad: {item.cantidad}</p>
+              <button onClick={() => handleEliminarItem(item.id)}>Eliminar</button>
             </div>
           ))
         )}

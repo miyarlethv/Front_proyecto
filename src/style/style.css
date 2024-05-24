@@ -69,23 +69,19 @@ input[type="password"] {
   
   .btn{
     background-color :#00DFE0;
-    color:#00A9DB;
+    color:black;
     margin-top: 20px;
   }
   
 
 /*estilo menu*/
-.menu, .carrito {
+.menu {
   text-align: center;
   padding: 20px;
+ 
 }
 
-.menu h1, .carrito h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.product-list, .cart-list {
+.product-list{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -93,41 +89,18 @@ input[type="password"] {
 }
 
 
-.product-item, .cart-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.product-item {
+  background-color: #00A9DB ;
+  border-radius: 10px;
   padding: 20px;
   width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  color: white;
 }
 
-.product-item:hover, .cart-item:hover {
-  transform: scale(1.05);
-}
-
-.product-item h2, .cart-item h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.product-item p, .cart-item p {
-  margin: 10px 0;
-}
-
-.product-item img, .cart-item img {
+.product-item img {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
-}
-.contador {
-  margin-top: 10px;
-}
-
-.contador label {
-  font-size: 1em;
-  margin-right: 10px;
 }
 
 .contador input {
@@ -137,35 +110,8 @@ input[type="password"] {
   text-align: center;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #a229ff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #d85fd0;
-}
 
-.mi-carrito-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.mi-carrito-button:hover {
-  background-color: #0056b3;
-}
 
 
 /* Mi carrito*/

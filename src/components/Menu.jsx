@@ -43,7 +43,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <h1>PRODUCTOS</h1>
-      <button onClick={handleMiCarritoClick}>Mi Carrito</button> <br /> <br />
+      <button className='btn btn-lg' onClick={handleMiCarritoClick}>Mi Carrito</button> <br /> <br />
       <div className="product-list">
         {productos.map((producto) => (
           <div key={producto.id} className="product-item">
@@ -63,7 +63,7 @@ const Menu = () => {
                 min="0"
               />
             </div>
-            <button onClick={() => handleAgregarCarrito(producto.id)}>Agregar al carrito</button>
+            <button className='btn btn-lg' onClick={() => handleAgregarCarrito(producto.id)}>Agregar al carrito</button>
           </div>
         ))}
       </div>
