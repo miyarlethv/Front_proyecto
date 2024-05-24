@@ -38,7 +38,7 @@ const Registro = () => {
       if (response.ok) {
         console.log(data.message);
         // Navegar a la siguiente página después del registro exitoso
-        navigate('localhost:5173');
+        navigate('/');
       } else {
         console.error(data.error);
         alert('Error al registrarse');
