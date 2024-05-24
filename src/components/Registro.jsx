@@ -23,6 +23,17 @@ const Registro = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+    fetch('http://localhost/Proyecto_final/registro.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+=======
     
     try {
       const response = await fetch('http://localhost/Proyecto_final/registro.php', {
@@ -36,6 +47,7 @@ const Registro = () => {
       const data = await response.json();
 
       if (response.ok) {
+>>>>>>> a04af36841953ed5b01e830c3cf0b2546761ccf7
         console.log(data.message);
         // Navegar a la siguiente página después del registro exitoso
         navigate('/');
