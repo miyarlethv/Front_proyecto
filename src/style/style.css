@@ -1,6 +1,5 @@
 /* estilos del registro*/
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: white;
@@ -181,8 +180,6 @@ text-transform: uppercase;
 .product-button:hover {
 background-color: #333; 
 }
-<<<<<<< HEAD
-=======
 
 
 /* */
@@ -218,4 +215,4 @@ background-color: #333;
   font-size: 16px;
 
 }
->>>>>>> a04af36841953ed5b01e830c3cf0b2546761ccf7
+
